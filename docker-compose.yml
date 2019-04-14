@@ -20,6 +20,12 @@ services:
     php:
         image: php:5.6-fpm
         restart: always
+        command:
+            - /bin/sh
+            - -c
+            - |
+                curl -sS https://getcomposer.org/installer | php
+                mv composer.phar /usr/local/bin/composer
         volumes:
             - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
             - "./web:/var/www/html"
