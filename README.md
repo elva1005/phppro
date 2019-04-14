@@ -1,6 +1,6 @@
 # phppro
 
-##1. install git 
+## 1. install git 
 ```
 yum install git
 ```
